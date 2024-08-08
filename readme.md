@@ -1,5 +1,3 @@
-# YDKJ For The Gang
+# MaxBox Boilerplate
 
-This is a recreation of the game ydkj by Jackbox Games.
-
-It features a webserver written in flask. A godot project for the game and a launcher.
+Create your own jackbox games using this simple boilerplate code!
