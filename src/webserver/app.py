@@ -14,8 +14,8 @@ socket = SocketIO(app)
 
 rooms = {}
 games = {
-    "ydkj": {
-        "page": "games/ydkj/game.html",
+    "game": {
+        "page": "games/game/game.html",
         "maxplayers": 10
     }
 }
