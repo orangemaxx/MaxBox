@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://beebt5n6nrpq"]
+
+[ext_resource type="Script" path="res://Scripts/Lobby.gd" id="1_bboia"]
+[ext_resource type="FontFile" uid="uid://dxd34p32f51kg" path="res://assets/fonts/oswald/Oswald-VariableFont_wght.ttf" id="2_b0coo"]
+
+[node name="Lobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bboia")
+
+[node name="RoomCode" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -194.0
+offset_right = 194.0
+offset_bottom = 297.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_b0coo")
+theme_override_font_sizes/font_size = 200
+text = "????"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerList" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 199.0
+offset_top = 310.0
+offset_right = 949.0
+offset_bottom = 592.0
+theme_override_constants/separation = 175
+
+[node name="HBox1" type="HBoxContainer" parent="PlayerList"]
+layout_mode = 2
+theme_override_constants/separation = 180
+alignment = 1
+
+[node name="HBox2" type="HBoxContainer" parent="PlayerList"]
+layout_mode = 2
+theme_override_constants/separation = 180
+alignment = 1

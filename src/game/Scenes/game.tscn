@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://q74wscr4xsai"]
+
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_farkn"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_farkn")
+
+[connection signal="tree_exited" from="." to="." method="_exit_tree"]

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MaxBox Games</title>
+        <link rel="stylesheet" href="/static/css/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="head">
+                    <h1>MaxBox Games</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="form">
+                <form action="/" method="post">
+                    <label for="name">Room Code</label>
+                    <input type="text" autocapitalize="off" autocorrect="off" placeholder="ROOM CODE" required id="code" name="code" maxlength="4" minlength="4">
+                    <!-- Name Input -->
+                    <label for="name">Name
+                        <span id="remaining">12</span>
+                    </label>
+                    
+                    <input type="text" autocapitalize="off" autocorrect="off" placeholder="ENTER YOUR NAME" required id="username" name="ign" maxlength="12">
+                    <!-- Join Button -->
+                    <button id="join" type="submit">
+                        <span>JOIN</span>
+                    </button>
+                    {% if error %}
+                    <ul>
+                    <li>{{error}}</li>
+                    </ul>
+                    {% endif %}
+
+                </form>
+                <script>
+                    // Remaining Input
+                    var nameInput = document.getElementById("username");
+                    var remaining = document.getElementById("remaining");
+                    nameInput.addEventListener('keyup', function() {
+                        remaining.innerHTML = (12 - nameInput.value.length)
+                    })
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
