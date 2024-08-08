@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game1</title>
+    <title>{{title}}</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/static/css/base.css">
 
@@ -22,7 +22,8 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-        <p>The Lobby Has Been Closed</p>
+        <h2>The Lobby Has Been Closed</h2>
+        <img alt="Sad Quiplash Guy" src="/static/img/errorIcon.png" width="100px">
         <form action="/">
             <button onclick="homeBtn" class="btn-blue" type="submit" style="cursor: pointer;">Quit</button>
         </form> 

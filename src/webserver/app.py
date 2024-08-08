@@ -7,18 +7,14 @@ import random
 
 with open('config.json') as config_file:
     cfg = json.load(config_file)
+with open('games.json') as games_cfg:
+    games = json.load(games_cfg)
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = cfg['SECRET_KEY']
 socket = SocketIO(app)
 
 rooms = {}
-games = {
-    "game": {
-        "page": "games/game/game.html",
-        "maxplayers": 10
-    }
-}
 
 # Generate the room code
 def roomCode(len):
@@ -59,7 +55,7 @@ def game():
     if room is None or session.get("name") is None or room not in rooms:
         return redirect(url_for('index'))
     game = rooms[room]['game']
-    return render_template(games[game]['page'], indexUrl=url_for('index'))
+    return render_template(games[game]['page'], indexUrl=url_for('index'), title=games[game]['title'])
 
 
 # Socket Io Stuff Below
